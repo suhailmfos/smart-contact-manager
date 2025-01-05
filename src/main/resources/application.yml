@@ -13,4 +13,4 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
-  port: 8087
+  port: 5000
