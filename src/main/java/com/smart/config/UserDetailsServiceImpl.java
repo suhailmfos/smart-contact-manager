@@ -18,15 +18,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		// fetching user from database
 
-		User user = userRepository.getUserByUserName(username);
+//		User user = userRepository.getUserByUserName(username);
 
-		if (user == null) {
-			throw new UsernameNotFoundException("Could not found user !!");
-		}
-
-		CustomUserDetails customUserDetails = new CustomUserDetails(user);
-
-		return customUserDetails;
+//		if (user == null) {
+//			throw new UsernameNotFoundException("Could not found user !!");
+//		}
+//
+//		CustomUserDetails customUserDetails = new CustomUserDetails(user);
+//
+		return null;
 	}
 
 }

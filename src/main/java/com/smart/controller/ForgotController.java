@@ -96,7 +96,9 @@ public class ForgotController {
 		if(myOtp==otp)
 		{
 			//password change form 
-			User user = this.userRepsitory.getUserByUserName(email);
+//			User user = this.userRepsitory.getUserByUserName(email);
+
+			User user = null;
 			
 			if(user==null)
 			{
@@ -126,9 +128,9 @@ public class ForgotController {
 	public String changePassword(@RequestParam("newpassword") String newpassword,HttpSession session)
 	{
 		String email=(String)session.getAttribute("email");
-		User user = this.userRepsitory.getUserByUserName(email);
-		user.setPassword(this.bcrypt.encode(newpassword));
-		this.userRepsitory.save(user);
+//		User user = this.userRepsitory.getUserByUserName(email);
+//		user.setPassword(this.bcrypt.encode(newpassword));
+//		this.userRepsitory.save(user);
 		return "redirect:/signin?change=password changed successfully..";
 		
 	}
