@@ -20,8 +20,12 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 		return new UserDetailsServiceImpl();
 	}
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
+//	@Bean
+//	public PasswordEncoder passwordEncoder() {
+//		return new BCryptPasswordEncoder();
+//	}
+
+	@Bean BCryptPasswordEncoder passwordEncoder(){
 		return new BCryptPasswordEncoder();
 	}
 
@@ -47,9 +51,8 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 		http
                 .csrf().disable()
                 .authorizeRequests()
+				.antMatchers("/public").permitAll() // permit root api
 				.antMatchers("/login").permitAll()
-                .anyRequest().authenticated().and().build();
-
+                .anyRequest().authenticated();
 	}
-
 }

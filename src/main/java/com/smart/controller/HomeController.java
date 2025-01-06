@@ -27,11 +27,11 @@ public class HomeController {
 	@Autowired
 	private UserRepository userRepository;
 
-	@RequestMapping("/")
-	public String home(Model model) {
-		model.addAttribute("title", "Home - Smart Contact Manager");
-		return "home";
-	}
+//	@RequestMapping("/")
+//	public String home(Model model) {
+//		model.addAttribute("title", "Home - Smart Contact Manager");
+//		return "home";
+//	}
 
 	@RequestMapping("/about")
 	public String about(Model model) {
