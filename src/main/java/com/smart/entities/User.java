@@ -33,4 +33,9 @@ public class User {
 	private String imageUrl;
 	@Column(length = 500)
 	private String about;
+
+	public User(User user){
+		this.email = user.getEmail();
+		this.password = user.getPassword();
+	}
 }
