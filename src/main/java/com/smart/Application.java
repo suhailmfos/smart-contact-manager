@@ -15,7 +15,7 @@ public class Application {
     private RestTemplate restTemplate;
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        SpringApplication.run(Application.class, args);ad
+        SpringApplication.run(Application.class, args);
     }
 
     @Bean

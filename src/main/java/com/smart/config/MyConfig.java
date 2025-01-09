@@ -53,6 +53,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 				.antMatchers("/public").permitAll() // permit root api
 				.antMatchers("/login").permitAll()
+				.antMatchers("/actuator/**").permitAll()
                 .anyRequest().authenticated();
 	}
 }
