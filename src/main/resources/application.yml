@@ -28,14 +28,10 @@ logging:
     org:
       springframework:
         security: DEBUG
+        hibernate: DEBUG
 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-#logging:
-#  level:
-#    org:
-#      springframework: DEBUG
-#      hibernate: DEBUG
